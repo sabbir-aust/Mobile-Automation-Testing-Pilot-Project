@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -33,24 +34,30 @@ public class BaseClass extends Capabilities{
 	}
 	
 	@Test
-	public void test1() throws InterruptedException {
+	public void validLogin() throws InterruptedException {
 		
 		Functionalities.login();
+		
 	}
 	
 	@Test
-	public void test2() throws InterruptedException {
+	public void invalidLoginAttempt() throws InterruptedException {
 		
 		Functionalities.invalidLogin();
 	}
 	
 	@Test
-	public void test3() throws InterruptedException {
+	public void loginWithEmptyField() throws InterruptedException {
 		
 		Functionalities.emptyLoginFields();
 	}
 
-	
+	@Test
+	public void addNewAssessors() throws InterruptedException {
+		
+		Functionalities.login();
+		Functionalities.addNewAssessor("Sabbir Ahmed", "Male");
+	}
 	
 	@AfterTest
 	public void afterTest() {
