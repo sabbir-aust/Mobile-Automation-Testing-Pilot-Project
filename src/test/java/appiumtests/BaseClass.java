@@ -26,7 +26,7 @@ import io.appium.java_client.remote.MobileCapabilityType;
 public class BaseClass extends Capabilities{
 
 	//static AppiumDriver<MobileElement> driver;
-	protected static AndroidDriver<MobileElement> driver;
+	public static AndroidDriver<MobileElement> driver;
 	
 	@BeforeTest
 	public void setup() throws MalformedURLException {
@@ -34,29 +34,42 @@ public class BaseClass extends Capabilities{
 	}
 	
 	@Test
-	public void validLogin() throws InterruptedException {
+	public void loginTest() throws InterruptedException {
 		
 		Functionalities.login();
+		Thread.sleep(3000);
+		Functionalities.logout();
+//		Functionalities.invalidLogin();
+//		Functionalities.emptyLoginFields();
+	}
+	
+	
+	@Test
+	public void newTeacher() throws InterruptedException {
 		
+		Functionalities.login();
+		Functionalities.addNewTeacher("Sabbir Ahmed", "Male");
 	}
 	
 	@Test
-	public void invalidLoginAttempt() throws InterruptedException {
+	public void newStudent() throws InterruptedException {
 		
-		Functionalities.invalidLogin();
+		Functionalities.login();
+		Functionalities.addNewTeacher("Sabbir Ahmed", "Male");
+		Functionalities.addNewLearner("Sabbir");
 	}
 	
 	@Test
-	public void loginWithEmptyField() throws InterruptedException {
-		
-		Functionalities.emptyLoginFields();
-	}
-
-	@Test
-	public void addNewAssessors() throws InterruptedException {
-		
+	public void assessments() throws InterruptedException {
 		Functionalities.login();
-		Functionalities.addNewAssessor("Sabbir Ahmed", "Male");
+		Functionalities.addNewTeacher("Sabbir Ahmed", "Male");
+		Functionalities.addNewLearner("Sabbir");
+		Functionalities.assessment();
+		Functionalities.selectNextAssessment("Sabbir Ahmed\nGender : Male\n2022-05-12","Sabbir\nID:\nEntry Date : 2022-05-12\n2022-05-12","Start 2nd Assessment");
+		Functionalities.assessment_1st10WordsWrong();
+		Functionalities.selectNextAssessment("Sabbir Ahmed\nGender : Male\n2022-05-12","Sabbir\nID:\nEntry Date : 2022-05-12\n2022-05-12","Start 3rd Assessment");
+		Functionalities.assessment_entireRowWrongFrom3rdToLast();
+		Functionalities.logout();
 	}
 	
 	@AfterTest

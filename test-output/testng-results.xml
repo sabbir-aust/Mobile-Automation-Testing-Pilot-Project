@@ -2,20 +2,20 @@
 <testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-18T15:05:50 BDT" name="Default suite" finished-at="2022-04-18T15:08:53 BDT" duration-ms="182822">
+  <suite started-at="2022-05-12T15:06:15 BDT" name="Default suite" finished-at="2022-05-12T15:11:27 BDT" duration-ms="311771">
     <groups>
     </groups>
-    <test started-at="2022-04-18T15:05:50 BDT" name="Default test" finished-at="2022-04-18T15:08:53 BDT" duration-ms="182822">
+    <test started-at="2022-05-12T15:06:15 BDT" name="Default test" finished-at="2022-05-12T15:11:27 BDT" duration-ms="311771">
       <class name="appiumtests.BaseClass">
-        <test-method is-config="true" signature="setup()[pri:0, instance:appiumtests.BaseClass@158da8e]" started-at="2022-04-18T15:05:50 BDT" name="setup" finished-at="2022-04-18T15:06:10 BDT" duration-ms="19052" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:appiumtests.BaseClass@2e005c4b]" started-at="2022-05-12T15:06:15 BDT" name="setup" finished-at="2022-05-12T15:06:38 BDT" duration-ms="22636" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="addNewAssessors()[pri:0, instance:appiumtests.BaseClass@158da8e]" started-at="2022-04-18T15:06:10 BDT" name="addNewAssessors" finished-at="2022-04-18T15:08:52 BDT" duration-ms="162065" status="PASS">
+        <test-method signature="assessments()[pri:0, instance:appiumtests.BaseClass@2e005c4b]" started-at="2022-05-12T15:06:38 BDT" name="assessments" finished-at="2022-05-12T15:11:25 BDT" duration-ms="287352" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addNewAssessors -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:appiumtests.BaseClass@158da8e]" started-at="2022-04-18T15:08:52 BDT" name="afterTest" finished-at="2022-04-18T15:08:53 BDT" duration-ms="1592" status="PASS">
+        </test-method> <!-- assessments -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:appiumtests.BaseClass@2e005c4b]" started-at="2022-05-12T15:11:25 BDT" name="afterTest" finished-at="2022-05-12T15:11:27 BDT" duration-ms="1651" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->

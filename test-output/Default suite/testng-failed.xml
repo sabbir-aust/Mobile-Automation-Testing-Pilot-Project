@@ -7,7 +7,7 @@
         <methods>
           <include name="setup"/>
           <include name="afterTest"/>
-          <include name="addNewAssessors"/>
+          <include name="assessments"/>
         </methods>
       </class> <!-- appiumtests.BaseClass -->
     </classes>

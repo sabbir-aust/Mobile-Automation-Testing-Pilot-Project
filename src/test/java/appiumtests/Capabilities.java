@@ -21,7 +21,7 @@ public class Capabilities {
 		caps.setCapability("deviceName", "Sabbir");
 		caps.setCapability("automationName", "UiAutomator2");
 		caps.setCapability("udid", "emulator-5554");
-		caps.setCapability("app", "C:\\Users\\sabinul.sabbir\\eclipse-workspace\\appiumtests\\apk\\EGRA_V1.0.0.apk");
+		caps.setCapability("app", "C:\\Users\\sabinul.sabbir\\eclipse-workspace\\appiumtests\\apk\\RARS_V1.0.0.apk");
 
 
 		URL url = new URL("http://127.0.0.1:4723/wd/hub");
